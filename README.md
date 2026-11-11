@@ -2,11 +2,11 @@
 
 ## Team Details
 
-| Role | Team member | Register number |
-|---|---|---|
-| Team member | K Neeraj | RA2411026050023 |
-| Team member | G Tarun Varma | RA2411026050037 |
-| Team member | N Bennu Durgesh | RA2411026050065 |
+| Team member | Register number |
+|---|---|
+| K Neeraj | RA2411026050023 |
+| G Tarun Varma | RA2411026050037 |
+| N Bennu Durgesh | RA2411026050065 |
 
 **Course:** 21CSC301T – Formal Language and Automata  
 **Assignment:** Task 4 – Formal Language and Automata-Based Real-World Problem Solving and System Design  
@@ -33,9 +33,17 @@ A mismatch exists if there is an input x such that Obs(P,x) != Obs(C(P),x). Univ
 | Bug witness | Input producing different observations |
 | General correctness | Equivalence for all supported inputs |
 
+![Compiler bug detection workflow](docs/images/compiler-checking-workflow.svg)
+
+*Figure 1. Restricted compiler-checking workflow: the source and compiled versions receive the same input, and their observable results are compared.*
+
 ## Worked example
 
-Source expression: a + 0. Input: a = 5. Correct output: 5. A faulty optimization may translate this into a + 1, producing 6. The input a = 5 is a concrete counterexample.
+Source expression: `a + 0`. Input: `a = 5`. Correct output: `5`. A faulty optimization may translate this into `a + 1`, producing `6`. The input `a = 5` is a concrete counterexample.
+
+![Worked example showing a faulty compiler optimization](docs/images/compiler-bug-example.svg)
+
+*Figure 2. A faulty optimization changes the result from 5 to 6, so the checker reports a bug witness.*
 
 ## Restricted-case engineering approach
 
@@ -72,6 +80,7 @@ python examples/demo.py
 - `compiler_checker/computability.py` – short theory notes.
 - `examples/` – correct and deliberately faulty compilation demonstrations.
 - `tests/` – automated unit tests.
+- `docs/images/` – diagrams used in this README.
 - `CONTRIBUTIONS.md` – individual contribution statements.
 
 ## Limitations
