@@ -17,22 +17,16 @@ The following allocation is a suggested division based on the project plan. It i
 - Develop the Turing-machine/program model and formal mapping.
 - Review the theoretical explanation for correctness.
 
-**Actual contribution (member to confirm/edit):** To be completed by K Neeraj.
 
 ### G Tarun Varma — proposed responsibilities
 - Develop the restricted-case compiler validation prototype.
 - Implement or review the source interpreter, target compiler, and differential validator.
 - Prepare worked examples and test cases.
 
-**Actual contribution (member to confirm/edit):** To be completed by G Tarun Varma.
 
 ### N Bennu Durgesh — proposed responsibilities
 - Research the undecidability argument and its relation to program equivalence.
 - Help prepare the practical implications and limitations.
 - Review and contribute to report and presentation documentation.
 
-**Actual contribution (member to confirm/edit):** To be completed by N Bennu Durgesh.
 
-## Team confirmation
-
-Before submission, all three members should verify the allocation, replace the contribution prompts with accurate descriptions of completed work, and approve the final statement.
