@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="270" viewBox="0 0 1000 270" role="img" aria-labelledby="title desc">
+<title id="title">Worked example of a compiler optimization bug</title><desc id="desc">For a equals five, source a plus zero produces five, but a faulty compiler emits a plus one and produces six, so the checker reports a counterexample.</desc>
+<rect width="1000" height="270" rx="18" fill="#f8fafc"/>
+<g font-family="Arial,sans-serif" text-anchor="middle" fill="#0f172a">
+<rect x="35" y="75" width="180" height="110" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="125" y="108" font-size="18" font-weight="bold">Input</text><text x="125" y="142" font-size="25">a = 5</text>
+<rect x="280" y="25" width="270" height="95" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="415" y="58" font-size="18" font-weight="bold">Source expression</text><text x="415" y="91" font-size="24">a + 0 = 5</text>
+<rect x="280" y="150" width="270" height="95" rx="14" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="415" y="183" font-size="18" font-weight="bold">Faulty compiled code</text><text x="415" y="216" font-size="24">a + 1 = 6</text>
+<rect x="670" y="75" width="285" height="110" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/><text x="812" y="108" font-size="18" font-weight="bold">Checker result</text><text x="812" y="142" font-size="23" fill="#b91c1c">BUG FOUND</text><text x="812" y="166" font-size="15">counterexample: a = 5</text>
+</g>
+<g stroke="#334155" stroke-width="2.5" fill="none"><path d="M215 112 H280"/><path d="M215 138 L280 197"/><path d="M550 72 L670 112"/><path d="M550 197 L670 148"/></g>
+</svg>
