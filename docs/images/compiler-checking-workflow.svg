@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="300" viewBox="0 0 1100 300" role="img" aria-labelledby="title desc">
+<title id="title">Compiler bug detection workflow</title><desc id="desc">Source expression is interpreted and compiled to target instructions; both executions receive the same input and their observations are compared.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+<rect width="1100" height="300" rx="18" fill="#f8fafc"/>
+<g font-family="Arial,sans-serif" text-anchor="middle" fill="#0f172a">
+<rect x="35" y="38" width="190" height="72" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="130" y="68" font-size="19" font-weight="bold">Source program P</text><text x="130" y="92" font-size="14">expression / AST</text>
+<rect x="35" y="188" width="190" height="72" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="130" y="218" font-size="19" font-weight="bold">Input x</text><text x="130" y="242" font-size="14">same test environment</text>
+<rect x="310" y="38" width="190" height="72" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="405" y="68" font-size="19" font-weight="bold">Compiler C</text><text x="405" y="92" font-size="14">translation</text>
+<rect x="585" y="38" width="205" height="72" rx="12" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/><text x="687" y="68" font-size="19" font-weight="bold">Target C(P)</text><text x="687" y="92" font-size="14">stack-machine code</text>
+<rect x="310" y="188" width="190" height="72" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/><text x="405" y="218" font-size="19" font-weight="bold">Run source</text><text x="405" y="242" font-size="14">Obs(P, x)</text>
+<rect x="585" y="188" width="205" height="72" rx="12" fill="#fce7f3" stroke="#db2777" stroke-width="2"/><text x="687" y="218" font-size="19" font-weight="bold">Run target</text><text x="687" y="242" font-size="14">Obs(C(P), x)</text>
+<rect x="865" y="105" width="200" height="90" rx="12" fill="#f1f5f9" stroke="#334155" stroke-width="2"/><text x="965" y="139" font-size="19" font-weight="bold">Compare</text><text x="965" y="164" font-size="14">equal / mismatch</text>
+</g>
+<g stroke="#334155" stroke-width="2.5" fill="none" marker-end="url(#arrow)"><path d="M225 74 H310"/><path d="M500 74 H585"/><path d="M130 110 V188"/><path d="M225 224 H310"/><path d="M500 224 H585"/><path d="M405 110 V188"/><path d="M687 110 V188"/><path d="M500 224 L865 165"/><path d="M790 224 L865 165"/></g>
+</svg>
