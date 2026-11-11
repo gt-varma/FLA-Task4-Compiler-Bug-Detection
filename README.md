@@ -1,7 +1,16 @@
 # Formal Language and Automata-Based Analysis of Compiler Bug Detection
 
+## Team Details
+
+| Role | Team member | Register number |
+|---|---|---|
+| Team member | K Neeraj | RA2411026050023 |
+| Team member | G Tarun Varma | RA2411026050037 |
+| Team member | N Bennu Durgesh | RA2411026050065 |
+
 **Course:** 21CSC301T – Formal Language and Automata  
-**Task:** Task 4 – Real-World Problem Solving and System Design
+**Assignment:** Task 4 – Formal Language and Automata-Based Real-World Problem Solving and System Design  
+**Project topic:** Compiler Bug Detection
 
 ## Problem
 
@@ -35,7 +44,7 @@ This repository implements a tiny integer expression language and compares a sou
 Possible outcomes:
 - **BUG FOUND** – at least one tested input produced a mismatch.
 - **NO BUG FOUND WITHIN TEST SCOPE** – all selected tests agreed.
-- **INCONCLUSIVE** – unsupported syntax or an execution/validation issue prevented a conclusion.
+- **INCONCLUSIVE** – unsupported syntax or a validation issue prevented a conclusion.
 
 A finite test suite is decidable over its stated finite scope, but passing it does not prove universal correctness. A timeout in a more general executor would be inconclusive, not proof of nontermination.
 
@@ -49,23 +58,28 @@ Practical tools therefore restrict the language and input domain, use bounded ex
 
 Requires Python 3.10 or later. No third-party packages are required.
 
-    python -m unittest discover -s tests -v
-    python examples/demo.py
+```bash
+python -m unittest discover -s tests -v
+python examples/demo.py
+```
+
+## Repository structure
+
+- `compiler_checker/source_interpreter.py` – reference semantics for the source language.
+- `compiler_checker/compiler.py` – translates expressions into stack-machine instructions and executes them.
+- `compiler_checker/validator.py` – compares source and compiled observations over selected test inputs.
+- `compiler_checker/equivalence.py` – compares observable results.
+- `compiler_checker/computability.py` – short theory notes.
+- `examples/` – correct and deliberately faulty compilation demonstrations.
+- `tests/` – automated unit tests.
+- `CONTRIBUTIONS.md` – individual contribution statements.
 
 ## Limitations
 
 This is an educational prototype, not a production compiler verifier. It supports integer constants, variables, unary minus, addition, subtraction, and multiplication. It does not model loops, functions, pointers, I/O, concurrency, undefined behavior, or machine-width overflow. Conclusions apply only to this model and tested inputs.
 
-## Team
-
-- K Neeraj — RA2411026050023
-- G Tarun Varma — RA2411026050037
-- N Bennu Durgesh — RA2411026050065
-
-Each member should complete their own contribution statement in CONTRIBUTIONS.md before submission.
-
 ## References
 
-1. Michael Sipser, Introduction to the Theory of Computation.
-2. John E. Hopcroft, Rajeev Motwani, and Jeffrey D. Ullman, Introduction to Automata Theory, Languages, and Computation.
-3. Alfred V. Aho et al., Compilers: Principles, Techniques, and Tools.
+1. Michael Sipser, *Introduction to the Theory of Computation*.
+2. John E. Hopcroft, Rajeev Motwani, and Jeffrey D. Ullman, *Introduction to Automata Theory, Languages, and Computation*.
+3. Alfred V. Aho et al., *Compilers: Principles, Techniques, and Tools*.
